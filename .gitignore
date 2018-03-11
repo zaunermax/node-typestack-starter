@@ -1,0 +1,10 @@
+# common
+dbConfig.json
+build
+
+# node project
+node_modules
+
+# Intellij IDE
+.idea
+drinking-contest-server.iml

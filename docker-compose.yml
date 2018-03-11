@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  dcs-db-dev:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: dcs
+    volumes:
+      - dcs_data_dev:/var/lib/mysql
+
+volumes:
+  dcs_data_dev:
