@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import { ILogger } from '../interfaces/ILogger';
 import { Logger } from '../decorators/Logger';
 
-export const DatabaseServiceImpl = new Token<DatabaseService>();
+export const MysqlDbServiceImpl = new Token<MysqlService>();
 
 interface IDbFields {
   username: string;
@@ -20,8 +20,8 @@ interface IDbCredentials {
   production: IDbFields;
 }
 
-@Service(DatabaseServiceImpl)
-export class DatabaseService implements IDbConfig {
+@Service(MysqlDbServiceImpl)
+export class MysqlService implements IDbConfig {
 
   private readonly configPath: string;
 
